@@ -1,0 +1,31 @@
+@import '../mixins';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F7F7F7;
+    @include flex-container(center, center);
+}
+
+.modal {
+    @include container(1100px, 700px);
+    @include flex-container(space-between, flex-start);
+
+    .popup {
+        &__close {
+            @include padding(30px, 0, 0, 30px);
+
+            & svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
+
+    }
+    
+    .bg-image {
+        @include size(550px, 700px);
+        // @include background-image(../../public/images/bg-image.jpg);
+
+        background-image: url(../../../public/images/bg-image.jpg);
+    }
+}
